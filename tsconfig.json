@@ -11,8 +11,8 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",               
-    "jsxImportSource": "react",        
+        "jsx": "react-jsx",               
+    "jsxImportSource": "react", 
     "incremental": true,
     "plugins": [
       {
