@@ -4,6 +4,7 @@ import Image from "next/image";
 
 interface ServicesHeaderProps {
   title: string;
+  subtitle?: string;
   titleDescription: string | React.ReactElement;
   titleImage: string;
   header: string;
@@ -11,6 +12,7 @@ interface ServicesHeaderProps {
 
 function ServicesHeader({
   title,
+  subtitle,
   titleDescription,
   titleImage,
   header,
@@ -36,9 +38,12 @@ function ServicesHeader({
       <div className="bg-white grid md:grid-cols-6 items-center py-10 px-4 md:px-28 gap-12">
         <div className="col-span-1 md:col-span-4 space-y-4  p-6 md:p-8">
           <BoxReveal boxColor={"#b7b5d8ff"} duration={0.8}>
-            <h1 className="text-3xl md:text-4xl font-semibold tracking-wider mb-2">
-              {title}
-            </h1>
+            <span className="flex items-end flex-wrap gap-2">
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-wider mb-2 ">
+                {title}
+              </h1>
+              <h2 className="text-2xl md:text-3xl text-gray-700 font-semibold tracking-wider mb-2">{subtitle}</h2>
+            </span>
           </BoxReveal>
           <BoxReveal boxColor={"#b7b5d8ff"} duration={0.8}>
             <div className="text-base md:text-lg font-light tracking-wide text-justify">
@@ -47,7 +52,7 @@ function ServicesHeader({
           </BoxReveal>
         </div>
 
-        <figure className="col-span-1 md:col-span-2 w-full h-64 md:min-h-[260] relative">
+        <figure className="col-span-1 md:col-span-2 w-full h-64 md:min-h-[270] relative">
           <Image
             src={titleImage}
             alt={`${title} related image`}
