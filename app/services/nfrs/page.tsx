@@ -112,13 +112,29 @@ function NFRS() {
     },
   ];
 
-  const titleDescription =
-    "At S.B. Thakali & Associates, we offer comprehensive advisory and support services for the implementation of Nepal Financial Reporting Standards (NFRS) — Nepal’s localized version of the International Financial Reporting Standards (IFRS). NFRS adoption enhances financial transparency, comparability, and credibility, helping your business meet both local and international expectations. We assist businesses throughout their NFRS journey, offering the following NFRS services.";
+  const titleDescription = (
+    <div>
+      At S.B. Thakali & Associates, we offer comprehensive advisory and support
+      services for the implementation of Nepal Financial Reporting Standards
+      (NFRS) — Nepal’s localized version of the International Financial
+      Reporting Standards (IFRS). NFRS adoption enhances financial transparency,
+      comparability, and credibility, helping your business meet both local and
+      international expectations. We assist businesses throughout their NFRS
+      journey, offering the following NFRS services:
+      <ul className="list-disc ml-5 mt-2">
+        <li>NFRS full (Nepal Financial Reporting Standard)</li>
+        <li>NFRS for SME (Small and Medium Enterprises)</li>
+        <li>NFRS for ME (Micro Enterprises)</li>
+        <li>NAS for NPO (Not-for-Profit Organisation)</li>
+      </ul>
+    </div>
+  );
 
   return (
     <div className="w-full min-h-screen mt-20 bg-gray-100">
       <ServicesHeader
-        title="NFRS"
+        title="Nepal Financial Reporting Standards"
+        subtitle ="(NFRS)"
         titleDescription={titleDescription}
         titleImage="/nfrs.avif"
         header="Services"
@@ -140,7 +156,7 @@ function NFRS() {
         <div className="col-span-1 md:col-span-4 space-y-4 p-6 md:p-8">
           <BoxReveal boxColor="#b7b5d8ff" duration={0.8}>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-wider mb-2">
-              NFRS Implementation Timeline in Nepal
+              NFRS Implementation Timeline in Nepal 
             </h1>
           </BoxReveal>
           <BoxReveal boxColor="#b7b5d8ff" duration={0.8}>
